@@ -31,18 +31,48 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fFN-or-m9P"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJV-vj-dr3">
+                                <rect key="frame" x="117.5" y="213" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="qtp-aE-BCB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcC-aD-5O8">
+                                <rect key="frame" x="117.5" y="267" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="myU-zg-YSc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aB0-yb-9b6">
+                                <rect key="frame" x="163" y="156" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eJV-vj-dr3" firstAttribute="top" secondItem="aB0-yb-9b6" secondAttribute="bottom" constant="26" id="FtC-V7-Qcs"/>
                             <constraint firstItem="Lvf-48-YF8" firstAttribute="top" secondItem="OhO-jH-2SP" secondAttribute="bottom" constant="8" id="NZx-Ia-Njd"/>
+                            <constraint firstItem="eJV-vj-dr3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qkx-hO-kVL"/>
                             <constraint firstItem="OhO-jH-2SP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TbG-XV-vnI"/>
                             <constraint firstItem="OhO-jH-2SP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XSm-rb-cBL"/>
+                            <constraint firstItem="aB0-yb-9b6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b7b-ex-nP1"/>
+                            <constraint firstItem="RcC-aD-5O8" firstAttribute="top" secondItem="eJV-vj-dr3" secondAttribute="bottom" constant="24" id="hof-cq-jqe"/>
+                            <constraint firstItem="RcC-aD-5O8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hov-qc-dC6"/>
                             <constraint firstItem="Lvf-48-YF8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pFD-3A-yKU"/>
+                            <constraint firstItem="OhO-jH-2SP" firstAttribute="top" secondItem="eJV-vj-dr3" secondAttribute="bottom" constant="80" id="u31-IU-Pju"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionswitch" destination="aB0-yb-9b6" id="Ouw-nD-o0t"/>
+                        <outlet property="bottomTextField" destination="RcC-aD-5O8" id="dXB-P9-Jpv"/>
                         <outlet property="mycapitallabel" destination="OhO-jH-2SP" id="5yD-Sp-dEr"/>
+                        <outlet property="topTextField" destination="eJV-vj-dr3" id="Jv2-3v-gzb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

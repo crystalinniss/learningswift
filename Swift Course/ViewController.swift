@@ -10,13 +10,38 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    var buttonCount = 0
+    // var buttonCount = 0
     
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var mycapitallabel: UILabel!
+    
+    @IBOutlet weak var additionswitch: UISwitch!
+    
+    
+    
     
     @IBAction func buttonTapped(_ sender: Any) {
         
-        buttonCount = buttonCount + 1
+        let addition = additionswitch.isOn
+        
+        if addition {
+            let sum = Int(topTextField.text!)! + Int(bottomTextField.text!)!
+            
+            mycapitallabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
+            
+        } else {
+            let sum = Int(topTextField.text!)! - Int(bottomTextField.text!)!
+            
+            mycapitallabel.text = "\(topTextField.text!) - \(bottomTextField.text!) = \(sum)"
+            
+        }
+        
+        
+        
+        /*
+        
+        buttonCount += 1
         
         print (buttonCount)
         
@@ -25,7 +50,7 @@ class ViewController: UIViewController {
             mycapitallabel.text = "Wow, 10 times, that's amazing!"
         }
         
-        
+        */
         
     }
     
